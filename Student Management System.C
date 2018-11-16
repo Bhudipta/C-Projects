@@ -31,7 +31,7 @@ int main()
 	printf("\n");
 	printf("\n");
 	printf("\n");
-	printf("\n\t\t\t\tPlease Enter a Key to Continue.....");
+	printf("\n\t\t\t\tPress any Key to Continue.....");
 	getch();
     system("cls");
 	while (1)
@@ -42,7 +42,7 @@ int main()
 			printf("\n Press M to modify the records.");
 			printf("\n Press S to search records.");
 			printf("\n Press D to delete records.");
-			printf("\n Press E to exit");
+			printf("\n\n Press E to exit\n\n");
 		choice=getche();
 		choice=toupper(choice);
 		switch(choice)
@@ -99,9 +99,9 @@ void addrecords()
 		fflush(stdin);
 		system("cls");
 		printf("1 record successfully added");
-		printf("\n Press esc key to exit, any other key to add other record:");
+		printf("\n\n\n Press esc key to exit, any other key to add other record:");
 		test=getche();
-		
+
 		if(test==27)
 			break;
 	}
@@ -138,7 +138,7 @@ void deleterecords()
 	if((f=fopen("c:/file.ojs","rb"))==NULL)
 	exit(0);
 	system("cls");
-	printf("Enter the ID number to be deleted from the Database");
+	printf("Enter the ID number to be deleted from the Database\n\n");
 	fflush(stdin);
 	scanf("%[^\n]",idnumber);
 	while(fread(&s,sizeof(s),1,f)==1)
@@ -179,7 +179,7 @@ void searchrecords()
 		exit(0);
 	fflush(stdin);
 	system("cls");
-	printf("Enter ID Number to be searched in the database");
+	printf("Enter ID Number to be searched in the database\n\n");
 	scanf("%s", idnumber);
 	while(fread(&s,sizeof(s),1,f)==1)
 	{
